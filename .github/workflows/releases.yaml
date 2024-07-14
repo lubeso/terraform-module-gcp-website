@@ -10,6 +10,6 @@ jobs:
     name: Update major version tag
     permissions:
       contents: write
-    uses: lubeso/github-workflow-update-major-version-tag@v0
+    uses: lubeso/github-workflow-update-major-version-tag/.github/workflows/reusable.yaml@v0
     with:
       release_tag: ${{ github.event.release.tag_name }}
