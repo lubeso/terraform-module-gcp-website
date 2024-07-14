@@ -2,10 +2,10 @@ variable "project" {
   type = string
 }
 
-variable "region" {
+variable "website_name" {
   type = string
 }
 
-variable "website_name" {
+variable "website_region" {
   type = string
 }
