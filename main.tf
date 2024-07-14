@@ -9,7 +9,7 @@ resource "random_id" "default" {
 resource "google_storage_bucket" "website" {
   # Required arguments
   name     = random_id.default.hex
-  location = upper(var.region)
+  location = upper(var.website_location)
 
   # Optional arguments
   force_destroy = true
