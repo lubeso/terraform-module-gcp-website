@@ -27,13 +27,13 @@ module "website_bucket_iam" {
   # Nothing to do here...
 
   # Optional inputs
-  storage_buckets = [google_storage_bucket.public.name]
+  storage_buckets = [google_storage_bucket.website.name]
   bindings        = { "roles/storage.objectViewer" = ["allUsers"] }
 }
 
 resource "google_compute_backend_bucket" "website" {
   # Required arguments
-  bucket_name = google_storage_bucket.public.name
+  bucket_name = google_storage_bucket.website.name
   name        = var.website_name
 
   # Optional arguments
