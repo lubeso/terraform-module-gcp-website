@@ -28,7 +28,7 @@ module "website_bucket_iam" {
 
   # Optional inputs
   storage_buckets = [google_storage_bucket.website.name]
-  bindings        = { "roles/storage.objectViewer" = ["allUsers"] }
+  bindings        = { "roles/storage.objectViewer" = [var.iam_member] }
 }
 
 resource "google_compute_backend_bucket" "website" {
